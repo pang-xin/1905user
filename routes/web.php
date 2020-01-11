@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/user/reg','Api\UserController@reg');
+Route::get('/user/login','Api\UserController@login');
+Route::get('/user/token','Api\UserController@getData');
