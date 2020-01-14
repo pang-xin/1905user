@@ -10,11 +10,11 @@ class UserController extends Controller
 {
     public function reg()
     {
-        $url = "http://www.lijiaxin.xyz/user/reg";
+        $url = "http://1905passport.com/user/reg";
         $data = [
-            'user_name' => 'zhangsan3',
-            'user_email' => 'zhang2@qq.com',
-            'user_tel'=>'123123323',
+            'user_name' => 'zhangsan4',
+            'user_email' => 'zhang3@qq.com',
+            'user_tel'=>'123123324',
             'user_pwd'=>'ljx123',
             'user_pwd1'=>'ljx123'
         ];
@@ -29,21 +29,26 @@ class UserController extends Controller
             'user_name'=>'xin',
             'user_pwd'=>'ljx123'
         ];
-        $url = "http://www.lijiaxin.xyz/user/login";
+        $url = "http://1905passport.com/user/login";
         $response = Common::curlPost($url,$login_info);
         print_r($response);
     }
 
     public function getData()
     {
-        $token = 'dadd6db9e34b16dfbcf056741dd4e1c2';
+        $token = '0beea5452de1461d8a1a45b190b763ab';
         $uid = '2';
-        $url = "http://www.lijiaxin.xyz/user/token";
+        $url = "http://1905passport.com/user/token";
         $header = [
             'token:'.$token,
             'uid:'.$uid
         ];
         $response = Common::curlGet($url,$header);
         print_r($response);
+    }
+
+    public function a()
+    {
+        echo 111;
     }
 }

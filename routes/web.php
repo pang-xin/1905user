@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/user/reg','Api\UserController@reg');
 Route::get('/user/login','Api\UserController@login');
 Route::get('/user/token','Api\UserController@getData');
+
+Route::prefix('/api')->middleware('Token')->group(function () {
+    Route::get('/user/a','Api\UserController@a');
+});
