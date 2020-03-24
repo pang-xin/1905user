@@ -22,3 +22,12 @@ Route::get('/user/token','Api\UserController@getData');
 Route::prefix('/api')->middleware('Token')->group(function () {
     Route::get('/user/a','Api\UserController@a');
 });
+Route::get('/user/image','TestController@images');
+Route::get('/user/navigation','TestController@navigation');
+Route::get('/user/cate','TestController@cate');
+Route::get('/user/search','TestController@search');
+
+
+Route::get('/user/hotel_image','TestController@hotel_image');
+Route::get('/user/hotel_title','TestController@hotel_title');
+Route::get('/user/hotel_cate','TestController@hotel_cate');
